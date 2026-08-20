@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="How Hexes on Automatic writes the Campaign Vault: an open, Obsidian-compatible markdown format shared with Dungeons on Automatic, with commissions that turn map stubs into keyed dungeons.">
+  <title>Hexes on Automatic — The Campaign Vault</title>
+  <link rel="canonical" href="https://hexes.dungeonsonautomatic.com/vault.html">
+  <meta property="og:site_name" content="Hexes on Automatic">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Hexes on Automatic — The Campaign Vault">
+  <meta property="og:description" content="One folder of markdown holds the campaign. Hexes writes the region; Dungeons fills the commissions; Obsidian reads all of it.">
+  <meta property="og:url" content="https://hexes.dungeonsonautomatic.com/vault.html">
+  <link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--surface-app); color: var(--text-body); font-family: var(--font-body); }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(1120px, 92vw); margin: 0 auto; }
+    header { padding: clamp(48px, 8vw, 90px) 0 40px; border-bottom: 1px solid var(--stone-800); background: radial-gradient(60% 50% at 20% 0%, rgba(47,143,87,0.16), transparent 70%); }
+    .eyebrow { font-family: var(--font-display); font-weight: 600; font-size: 12px; letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: var(--brass-300); }
+    h1, h2, h3 { font-family: var(--font-display); color: var(--text-strong); text-transform: uppercase; }
+    h1 { max-width: 880px; margin: 14px 0 0; font-size: clamp(42px, 6vw, 72px); line-height: 1.03; letter-spacing: 0.03em; }
+    .lead { max-width: 70ch; margin: 20px 0 0; color: var(--text-muted); font-size: 18px; line-height: 1.65; }
+    main { display: grid; gap: 24px; padding: 42px 0 88px; }
+    section { background: var(--surface-panel); border: 1px solid var(--border-hairline); border-radius: var(--radius-lg); padding: clamp(22px, 4vw, 34px); box-shadow: var(--shadow-sm), var(--glint-top); }
+    h2 { margin: 0; font-size: clamp(24px, 3vw, 34px); letter-spacing: 0.04em; }
+    h3 { margin: 26px 0 0; font-size: 18px; letter-spacing: 0.03em; color: var(--brass-300); }
+    p, li { color: var(--text-muted); line-height: 1.65; font-size: 15.5px; }
+    .section-lede { max-width: 66ch; margin: 12px 0 0; }
+    ul { margin: 14px 0 0; padding-left: 22px; }
+    ul li { margin-bottom: 8px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
+    .action { display: inline-flex; align-items: center; min-height: 42px; padding: 0 16px; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); background: var(--surface-sunken); color: var(--text-body); font-family: var(--font-display); font-weight: 700; font-size: 14px; letter-spacing: 0.03em; text-transform: uppercase; cursor: pointer; }
+    .action:hover { border-color: var(--brass-400); color: var(--brass-300); }
+    .action--primary { border-color: var(--canopy-500); color: var(--canopy-300); }
+    .tree { margin-top: 20px; padding: 18px 20px; border: 1px solid var(--border-hairline); border-radius: var(--radius-sm); background: var(--surface-sunken); overflow-x: auto; }
+    .tree pre { margin: 0; font-family: var(--font-mono); font-size: 13px; line-height: 1.7; color: var(--text-body); }
+    .tree .c { color: var(--text-faint); }
+    .tree .d { color: var(--brass-300); }
+    .note { margin-top: 22px; padding: 16px 18px; border: 1px solid var(--border-hairline); border-left: 3px solid var(--canopy-500); border-radius: var(--radius-sm); background: var(--surface-sunken); }
+    .note p { margin: 0; }
+    .colophon { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 26px; padding-top: 20px; border-top: 1px solid var(--border-hairline); font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-faint); }
+    .colophon a { color: var(--brass-300); }
+    .inline-link { color: var(--brass-300); text-decoration: underline; text-underline-offset: 2px; }
+    code { font-family: var(--font-mono); font-size: 0.92em; color: var(--brass-300); }
+    strong { color: var(--text-strong); }
+  </style>
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <div class="site-family" aria-label="On Automatic family">
+    <div class="site-wrap site-family__inner">
+      <a class="site-family__brand" href="https://dungeonsonautomatic.com/family.html">On Automatic</a>
+      <div class="site-family__links"><a href="https://dungeonsonautomatic.com/">Dungeons</a><a href="index.html" aria-current="page">Hexes</a><a href="https://dungeonsonautomatic.com/characters.html">Characters</a><a href="https://dungeonsonautomatic.com/campaigns.html">Campaign Vault</a><a href="https://dungeonsonautomatic.com/monsters.html">Monster Library</a></div>
+    </div>
+  </div>
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="site-wrap site-nav__inner">
+      <a class="site-brand" href="index.html"><img src="assets/brand/hoa_logo_transparent.svg" alt=""><span>Hexes on Automatic</span></a>
+      <div class="site-nav__links"><a href="index.html">Home</a><a href="quickstart.html">Quickstart</a><a href="vault.html" aria-current="page">The Vault</a><a href="releases.html">Releases</a></div>
+      <a class="site-button site-button--primary" href="releases.html#downloads">Download</a>
+    </div>
+  </nav>
+  <header>
+    <div class="wrap">
+      <span class="eyebrow">The Campaign Vault</span>
+      <h1>The campaign is a folder. The apps just visit.</h1>
+      <p class="lead">Hexes exports into the Campaign Vault: a plain folder of markdown notes with YAML frontmatter, publicly specified, readable in Obsidian with zero apps installed. Dungeons on Automatic writes into the same folder. The vault is yours whether or not any of them stay installed.</p>
+      <div class="actions">
+        <a class="action action--primary" href="https://github.com/Zuljita/CampaignsOnAutomatic">Read the spec</a>
+        <a class="action" href="#writes">What Hexes writes</a>
+        <a class="action" href="#commissions">The commission flow</a>
+      </div>
+    </div>
+  </header>
+  <main class="wrap">
+    <section id="writes">
+      <h2>What Hexes writes</h2>
+      <p class="section-lede">One export produces a region tree like this. Every note carries a stable <code>oa_id</code>, so links keep working after renames.</p>
+      <div class="tree"><pre>
+<span class="d">your-campaign/</span>
+├── <span class="d">regions/greenfield/</span>
+│   ├── region.md              <span class="c">overview, factions sketch, road &amp; travel table</span>
+│   ├── <span class="d">hexes/</span>                 <span class="c">one note per content hex (terrain, features,</span>
+│   │   ├── hex-0302.md        <span class="c">obstacles, residents, field description)</span>
+│   │   └── ...
+│   ├── <span class="d">settlements/</span>           <span class="c">a stub per town — Towns on Automatic's future inbox</span>
+│   ├── <span class="d">sites/</span>                 <span class="c">a stub per dungeon site</span>
+│   └── <span class="d">state/</span>                 <span class="c">the machine copy Hexes reopens (hoa-*.json)</span>
+├── <span class="d">factions/</span>              <span class="c">faction notes + relationship map</span>
+├── <span class="d">commissions/</span>
+│   └── the-sunken-grotto.request.json   <span class="c">work order for Dungeons on Automatic</span>
+└── <span class="d">_index/</span>                <span class="c">compiled ids and relationships (validator output)</span>
+</pre></div>
+      <h3>The rules that keep it safe</h3>
+      <ul>
+        <li><strong>One writer per file.</strong> Each note is owned by the app that minted it; nothing else touches it. Cross-app references live in <code>oa_refs</code> frontmatter, never in app state.</li>
+        <li><strong>Generated prose sits in fences.</strong> Machine text lives between <code>oa:generated</code> markers. Everything you write outside them is never overwritten, on any re-export.</li>
+        <li><strong>Locks freeze what you've settled.</strong> Mark a note's content, narrative or geometry with <code>oa_locks</code> and regeneration leaves it alone.</li>
+        <li><strong>No app required.</strong> It's markdown. Obsidian gets wikilinks and the relationship map for free; git, grep and a text editor all work.</li>
+      </ul>
+    </section>
+    <section id="commissions">
+      <h2>Sites become dungeons by paperwork</h2>
+      <p class="section-lede">Hexes places a dungeon site and knows only what the overworld knows: where it sits, what terrain surrounds it, roughly what lives nearby. That's exactly what goes in the work order.</p>
+      <ul>
+        <li>Every site export includes <code>commissions/&lt;site&gt;.request.json</code>: a SiteCommission envelope with a coordinate-derived seed, terrain and context. Existing files are never overwritten.</li>
+        <li>Dungeons on Automatic reads the envelope and builds the keyed dungeon &mdash; maps, room key, encounters, treasure, VTT exports.</li>
+        <li>The linkage is recorded in the vault. The dungeon never learns about the world, and the world never reaches into the dungeon; the folder holds the thread between them.</li>
+      </ul>
+      <div class="note">
+        <p>The format is deliberately boring: versioned spec, JSON schema, reference validator and an example vault live in the public <a class="inline-link" href="https://github.com/Zuljita/CampaignsOnAutomatic">CampaignsOnAutomatic</a> repository. If you want to write tools against it, that's the contract.</p>
+      </div>
+      <div class="colophon">
+        <a href="quickstart.html">Make your first region</a>
+        <a href="https://dungeonsonautomatic.com/campaigns.html">The Vault on the Dungeons site</a>
+        <a href="https://github.com/Zuljita/CampaignsOnAutomatic">Spec on GitHub</a>
+      </div>
+    </section>
+  </main>
+  <section class="legal-notice" aria-label="Steve Jackson Games notice">
+    <div class="wrap">
+      <p>Hexes on Automatic is an original game aid by Kyle Norton for use with <a href="https://www.sjgames.com/gurps/"><b><i>GURPS</i></b></a> and <a href="https://www.sjgames.com/dungeonfantasy/"><b><i>Dungeon Fantasy Roleplaying Game</i></b></a> from <a href="https://www.sjgames.com/">Steve Jackson Games</a>. It is not official and is not endorsed by Steve Jackson Games.</p>
+      <p>GURPS and Dungeon Fantasy Roleplaying Game are trademarks or registered trademarks of Steve Jackson Games. All rights are reserved by Steve Jackson Games. This free, non-resale game aid uses those marks under the <a href="https://www.sjgames.com/general/online_policy.html">SJ Games Online Policy</a>; no SJ Games art, logos, or trade dress are hosted here.</p>
+    </div>
+  </section>
+</body>
+</html>

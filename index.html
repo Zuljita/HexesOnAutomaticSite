@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A local-first desktop app that turns one seed into a runnable overworld hex region for DFRPG and GURPS: terrain, rivers, settlements, dungeon sites, roads and travel times, written into an open Campaign Vault that Dungeons on Automatic can build from.">
+  <title>Hexes on Automatic — Overworld Hex Regions for DFRPG &amp; GURPS</title>
+  <link rel="canonical" href="https://hexes.dungeonsonautomatic.com/">
+  <meta property="og:site_name" content="Hexes on Automatic">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Hexes on Automatic — Overworld Hex Regions for DFRPG &amp; GURPS">
+  <meta property="og:description" content="One seed becomes a GM-usable hex region: terrain, rivers, settlements, dungeon sites, roads and travel times, with optional local AI to name and describe it. Written into an open Campaign Vault.">
+  <meta property="og:url" content="https://hexes.dungeonsonautomatic.com/">
+  <meta property="og:image" content="https://hexes.dungeonsonautomatic.com/assets/site/region-hero.png">
+  <meta property="og:image:width" content="1620">
+  <meta property="og:image:height" content="1050">
+  <meta property="og:image:alt" content="The Hexes on Automatic workspace: generation controls, a colored hex map with rivers and roads, and the region gazetteer.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <div class="site-family" aria-label="On Automatic family">
+    <div class="site-wrap site-family__inner">
+      <a class="site-family__brand" href="https://dungeonsonautomatic.com/family.html">On Automatic</a>
+      <div class="site-family__links"><a href="https://dungeonsonautomatic.com/">Dungeons</a><a href="index.html" aria-current="page">Hexes</a><a href="https://dungeonsonautomatic.com/characters.html">Characters</a><a href="https://dungeonsonautomatic.com/campaigns.html">Campaign Vault</a><a href="https://dungeonsonautomatic.com/monsters.html">Monster Library</a></div>
+    </div>
+  </div>
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="site-wrap site-nav__inner">
+      <a class="site-brand" href="#top" aria-label="Hexes on Automatic home">
+        <img src="assets/brand/hoa_logo_transparent.svg" alt="">
+        <span>Hexes on Automatic</span>
+      </a>
+      <div class="site-nav__links">
+        <a href="#workflow">How it works</a>
+        <a href="quickstart.html">Quickstart</a>
+        <a href="vault.html">The Vault</a>
+        <a href="releases.html">Releases</a>
+      </div>
+      <a class="site-button site-button--primary" href="releases.html#downloads">Download</a>
+    </div>
+  </nav>
+
+  <header class="site-hero" id="top">
+    <div class="site-wrap site-hero__grid">
+      <div class="site-hero__copy">
+        <div class="site-eyebrow">Local-first overworld prep for DFRPG &amp; GURPS</div>
+        <h1>Map the region. <em>Skip the blank hexes.</em></h1>
+        <p class="site-hero__lede">Give it a seed and a few knobs. A deterministic generator lays down terrain, rivers, settlements, dungeon sites and roads, then writes the whole region into an open Campaign Vault &mdash; with optional local AI to name and describe what the survey found.</p>
+        <div class="site-hero__actions">
+          <a class="site-button site-button--primary" href="releases.html#downloads">Get the Desktop App</a>
+          <a class="site-button site-button--quiet" href="quickstart.html">Make Your First Region</a>
+        </div>
+        <p class="site-hero__note">Free early-access builds (0.1.x) &middot; Windows, macOS &amp; Linux &middot; optional local AI built in &middot; no account, no cloud &mdash; your prep stays on your machine</p>
+      </div>
+
+      <div class="product-window" aria-label="Hexes on Automatic workspace preview">
+        <div class="product-window__bar" aria-hidden="true"><i></i><i></i><i></i><span>FIELD SURVEY / SEED 443127</span></div>
+        <img src="assets/site/region-hero.png" alt="Hexes on Automatic showing the generation toolbar, a colored hex map with rivers, roads and labeled settlements, and the region gazetteer panel.">
+        <div class="product-window__caption"><strong>One workspace.</strong> Seed, survey, polish, export.</div>
+      </div>
+    </div>
+  </header>
+
+  <div class="proof-strip" aria-label="Product highlights">
+    <div class="site-wrap proof-strip__inner">
+      <div class="proof"><b>Deterministic</b><span>same seed, same region</span></div>
+      <div class="proof"><b>Vault-native</b><span>open Obsidian-ready markdown</span></div>
+      <div class="proof"><b>Local-first</b><span>no account, no cloud required</span></div>
+      <div class="proof"><b>Feeds Dungeons</b><span>a work order per dungeon site</span></div>
+    </div>
+  </div>
+
+  <main>
+    <section class="site-section" id="workflow">
+      <div class="site-wrap">
+        <div class="section-heading">
+          <div>
+            <div class="site-eyebrow">How it works</div>
+            <h2>From one seed to a region with names on it.</h2>
+          </div>
+          <p>Hexes does the geography, the placement and the paperwork. The judgment calls stay yours, because they only make sense with your campaign on the table.</p>
+        </div>
+
+        <div class="workflow">
+          <article class="workflow__step">
+            <div class="workflow__number">01 / SEED</div>
+            <h3>Set the terms</h3>
+            <p>Pick a seed, or roll one. Set columns and rows, then push water, ruggedness, moisture, settlements and sites toward the region you have in mind.</p>
+          </article>
+          <article class="workflow__step">
+            <div class="workflow__number">02 / SURVEY</div>
+            <h3>Generate the geography</h3>
+            <p>Elevation, moisture and temperature fields pick a biome for every hex. Rivers trace downhill, settlements land where the scoring says people would, and roads join them.</p>
+          </article>
+          <article class="workflow__step">
+            <div class="workflow__number">03 / READ</div>
+            <h3>Inspect any hex</h3>
+            <p>Click a hex for its terrain, features, obstacles and residents. The gazetteer keeps settlements, sites and road distances in miles and walking days at your elbow.</p>
+          </article>
+          <article class="workflow__step">
+            <div class="workflow__number">04 / EXPORT</div>
+            <h3>Write the vault</h3>
+            <p>One folder of markdown: a region note, a note per interesting hex, stubs for settlements, sites and factions, and a work order for every dungeon site.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="hybrid" id="hybrid" aria-labelledby="hybrid-title">
+      <div class="site-wrap hybrid__inner">
+        <div>
+          <div class="site-eyebrow">Local AI, fenced in</div>
+          <h2 id="hybrid-title">AI polish that cannot redraw the map.</h2>
+          <p class="hybrid__lede">Two directors run on a local model &mdash; the app can download one onto its bundled llama.cpp runtime, or connect to the Ollama, LM Studio or llama.cpp server you already have. They name places, write gazetteer notes and stage encounters, but <strong>every choice travels through a typed operation the generator validates.</strong> No model, no problem: without one you get the deterministic names instead.</p>
+        </div>
+
+        <div class="hybrid__machine" aria-label="How director choices become a valid region">
+          <div class="hybrid__machine-head"><span>Director request pipeline</span><span>Guardrails active</span></div>
+          <div class="hybrid__flow">
+            <div class="hybrid__step"><b>01 / Ground</b><p><strong>The survey sets the facts:</strong> terrain per hex, a closed obstacle vocabulary, and a monster shortlist filtered by climate and terrain.</p></div>
+            <div class="hybrid__step"><b>02 / Propose</b><p><strong>A director answers with picks and prose:</strong> names, notes, rumors and staged encounters, chosen from the lists it was handed.</p></div>
+            <div class="hybrid__step"><b>03 / Apply</b><p><strong>An executor applies each operation.</strong> Anything off the menu is rejected and echoed back with the legal candidates, so the model can correct itself.</p></div>
+            <div class="hybrid__step"><b>04 / Verify</b><p><strong>A checkpoint and validation gate get the last word.</strong> A pass that fails them falls back to the deterministic result, by name.</p></div>
+          </div>
+          <div class="hybrid__result"><span>AI proposes &rarr; typed operation &rarr; validated apply &rarr; checkpoint</span><strong>Result: a coherent region that still obeys the map</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="site-section site-section--sunken" id="packet">
+      <div class="site-wrap">
+        <div class="section-heading">
+          <div>
+            <div class="site-eyebrow">The region packet</div>
+            <h2>Everything a hexcrawl needs before anyone rolls.</h2>
+          </div>
+          <p>Every hex carries terrain, features, obstacles and residents. The region carries settlements, sites, roads, travel times and a first sketch of who holds power.</p>
+        </div>
+
+        <div class="artifact-grid">
+          <article class="artifact artifact--wide artifact--brass">
+            <div class="artifact__label">Campaign Vault</div>
+            <h3>One folder of markdown, yours forever</h3>
+            <p>A region note, a note per interesting hex, stubs for settlements, sites and factions, machine state under <code style="font-family: var(--font-mono); font-size: 0.9em; color: var(--brass-300);">state/</code>, and a commission file for every dungeon site. Obsidian reads it as-is. <a href="vault.html">How the vault ties the apps together.</a></p>
+            <div class="artifact__tags"><span>region.md</span><span>hex notes</span><span>stubs</span><span>state/</span><span>commissions/</span><span>oa_refs</span></div>
+          </article>
+          <article class="artifact">
+            <div class="artifact__label">Hex map</div>
+            <h3>Terrain that makes geographic sense</h3>
+            <p>Elevation, moisture and temperature fields shape the region at six miles per hex. Climate band and terrain pick each biome; rivers run downhill to the coast instead of wherever.</p>
+          </article>
+          <article class="artifact artifact--canopy">
+            <div class="artifact__label">Settlements &amp; sites</div>
+            <h3>Places put where people would put them</h3>
+            <p>Settlement spots are scored on water, coast, terrain and spacing. Dungeon sites keep their distance from towns; landmarks and faction sketches fill in the rest.</p>
+          </article>
+          <article class="artifact">
+            <div class="artifact__label">Roads &amp; travel</div>
+            <h3>Distances you can quote at the table</h3>
+            <p>A trunk network routed over terrain cost joins the settlements, with fords and bridges at the river crossings and a travel table in miles and walking days.</p>
+          </article>
+          <article class="artifact">
+            <div class="artifact__label">Obstacles &amp; residents</div>
+            <h3>Trouble seeded from the geometry</h3>
+            <p>Passes, cliffs, bogs, scree, tolls and dry stretches follow from the terrain. Encounter and lair candidates come from a free library of 457 statted monsters, filtered by climate and terrain. <a href="https://dungeonsonautomatic.com/monsters.html">Browse the monster library.</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="site-section" id="handoff">
+      <div class="site-wrap">
+        <div class="section-heading">
+          <div>
+            <div class="site-eyebrow">The handoff</div>
+            <h2>Every dungeon site leaves a work order.</h2>
+          </div>
+          <p>When Hexes places a site, it also writes <code style="font-family: var(--font-mono); font-size: 0.9em; color: var(--brass-300);">commissions/&lt;site&gt;.request.json</code> &mdash; seed, terrain and context in a fixed envelope. Dungeons on Automatic turns that stub into a keyed dungeon, and the linkage lives in the vault, never in either app.</p>
+        </div>
+        <div class="site-hero__actions">
+          <a class="site-button site-button--primary" href="vault.html">How the Vault connects the apps</a>
+          <a class="site-button site-button--quiet" href="https://dungeonsonautomatic.com/">Dungeons on Automatic</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="site-section site-section--sunken" id="control">
+      <div class="site-wrap control-grid">
+        <div>
+          <div class="site-eyebrow">Selective control</div>
+          <h2>Random where you want it. Stable where you need it.</h2>
+          <p class="control-grid__lede">The same promise as the rest of the family: the dice are yours to keep or re-throw, and nothing you wrote gets overwritten.</p>
+        </div>
+        <div class="control-list">
+          <div class="control-item"><b>Seeds</b><p><strong>Repeat a region exactly.</strong> The same seed and knobs rebuild the same region, down to the last ford.</p></div>
+          <div class="control-item"><b>Knobs</b><p><strong>Shape the survey before it runs.</strong> Columns, rows, water, ruggedness, moisture, settlement and site counts are all yours to set.</p></div>
+          <div class="control-item"><b>Round trips</b><p><strong>Come back later.</strong> Open from Vault reopens a saved region, and your own prose outside the generated fences survives every re-export.</p></div>
+          <div class="control-item"><b>Local AI</b><p><strong>Polish is optional.</strong> One click downloads a small model onto the bundled runtime, or point Hexes at Ollama, LM Studio or llama.cpp. Deterministic code owns the map.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="staff-band" aria-labelledby="staff-title">
+      <div class="site-wrap staff-band__inner">
+        <div>
+          <div class="site-eyebrow">The field team</div>
+          <h2 id="staff-title">Two directors, played by your local model.</h2>
+        </div>
+        <div class="staff-band__roster">
+          <div class="staff-member">
+            <svg viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="17" fill="none" stroke="#3ba669" stroke-width="2"/><path d="M26 6 L29 23 L46 26 L29 29 L26 46 L23 29 L6 26 L23 23 Z" fill="#e8be1a"/><circle cx="26" cy="26" r="3.2" fill="#100f12" stroke="#ffd800" stroke-width="1.4"/></svg>
+            <div><b>Aldrith Vane</b><span>Cartographer &middot; names from the drafting table</span></div>
+          </div>
+          <div class="staff-member">
+            <svg viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="17" fill="none" stroke="#e8be1a" stroke-width="3.4"/><g stroke="#e8be1a" stroke-width="2.6"><line x1="26" y1="9" x2="26" y2="43"/><line x1="9" y1="26" x2="43" y2="26"/><line x1="14" y1="14" x2="38" y2="38"/><line x1="14" y1="38" x2="38" y2="14"/></g><circle cx="26" cy="26" r="4.6" fill="#100f12" stroke="#3ba669" stroke-width="2.2"/></svg>
+            <div><b>Bram Half-Ear</b><span>Caravan master &middot; warns from the ground</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="site-wrap closing">
+        <div>
+          <div class="site-eyebrow">Early access</div>
+          <h2>It&rsquo;s young. It works. Come break it.</h2>
+          <p>The 0.1.x builds cover every platform, generate real regions and write real vaults. The rough edges are listed plainly on the <a href="releases.html#known-issues">releases page</a>. When something misbehaves, a bug report with the seed attached is the most useful thing you can hand us.</p>
+        </div>
+        <div class="closing__actions">
+          <a class="site-button site-button--primary" href="releases.html#downloads">Download Hexes</a>
+          <a class="site-button site-button--quiet" href="https://github.com/Zuljita/DungeonsOnAutomaticSite/issues">Report what breaks</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section class="legal-notice" aria-label="Steve Jackson Games notice">
+    <div class="site-wrap wrap">
+      <p>Hexes on Automatic is an original game aid by Kyle Norton for use with <a href="https://www.sjgames.com/gurps/"><b><i>GURPS</i></b></a> and <a href="https://www.sjgames.com/dungeonfantasy/"><b><i>Dungeon Fantasy Roleplaying Game</i></b></a> from <a href="https://www.sjgames.com/">Steve Jackson Games</a>. It is not official and is not endorsed by Steve Jackson Games.</p>
+      <p>GURPS and Dungeon Fantasy Roleplaying Game are trademarks or registered trademarks of Steve Jackson Games. All rights are reserved by Steve Jackson Games. This free, non-resale game aid uses those marks under the <a href="https://www.sjgames.com/general/online_policy.html">SJ Games Online Policy</a>; no SJ Games art, logos, or trade dress are hosted here.</p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="site-wrap site-footer__inner">
+      <a class="site-brand" href="#top"><img src="assets/brand/hoa_logo_transparent.svg" alt=""><span>Hexes on Automatic</span></a>
+      <span>Overworld prep, on schedule.</span>
+      <div class="site-footer__links">
+        <a href="https://dungeonsonautomatic.com/family.html">On Automatic family</a>
+        <a href="https://dungeonsonautomatic.com/">Dungeons</a>
+        <a href="quickstart.html">Quickstart</a>
+        <a href="vault.html">The Vault</a>
+        <a href="releases.html">Releases</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="https://github.com/Zuljita/CampaignsOnAutomatic">Vault spec</a>
+        <a href="https://github.com/Zuljita/DungeonsOnAutomaticSite/issues">Report a bug</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

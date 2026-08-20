@@ -1,0 +1,126 @@
+/* ============================================================
+   Hexes on Automatic — Color Tokens
+   Same stone-dark workshop chrome and brass machine voice as
+   Dungeons on Automatic, so the family reads as siblings. The
+   primary shifts from DOA's ember red to canopy green — the
+   overworld's color — sampled against the app's terrain palette.
+   ============================================================ */
+
+:root {
+  /* ---- Brand: Canopy (overworld green — primary) ---- */
+  --canopy-50:  #eaf6ee;
+  --canopy-100: #cdebd8;
+  --canopy-200: #9dd8b4;
+  --canopy-300: #66c08c;
+  --canopy-400: #3ba669;
+  --canopy-500: #2f8f57;   /* primary brand */
+  --canopy-600: #237445;
+  --canopy-700: #1b5b37;
+  --canopy-800: #143f27;
+  --canopy-900: #0c2618;
+
+  /* ---- Brand: Brass (shared family secondary — the gears) ---- */
+  --brass-50:  #fff8db;
+  --brass-100: #ffeea3;
+  --brass-200: #ffe066;
+  --brass-300: #ffd800;   /* family gold */
+  --brass-400: #e8be1a;
+  --brass-500: #c79a16;
+  --brass-600: #9c7611;
+  --brass-700: #74570d;
+  --brass-800: #4d3a09;
+  --brass-900: #2e2305;
+
+  /* ---- Ember (DOA's red — kept for family components/links) ---- */
+  --ember-50:  #fcecea;
+  --ember-100: #f7ccc6;
+  --ember-200: #ef9a8e;
+  --ember-300: #e4634f;
+  --ember-400: #d23a23;
+  --ember-500: #d30000;
+  --ember-600: #b00b06;
+  --ember-700: #8a0a08;
+  --ember-800: #5f0c0b;
+  --ember-900: #3a0908;
+
+  /* ---- Stone: warm-tinted dark neutrals (workshop chrome) ---- */
+  --stone-950: #100f12;   /* deepest — app background */
+  --stone-900: #16151a;
+  --stone-850: #1c1b21;
+  --stone-800: #232128;   /* panel surface */
+  --stone-700: #2d2b34;
+  --stone-600: #3a3742;   /* hairline borders, raised */
+  --stone-500: #4a4753;
+  --stone-400: #6a6675;
+  --stone-300: #8e8a99;   /* muted text on dark */
+  --stone-200: #b6b2c0;
+  --stone-100: #d8d5df;
+  --stone-50:  #efedf3;   /* near-white text on dark */
+
+  /* ---- Parchment: aged-paper light surfaces (the map document) ---- */
+  --parchment-floor: #fff7df;
+  --parchment-50:    #f8efd6;
+  --parchment-100:   #f4e8ce;  /* default parchment */
+  --parchment-200:   #eadbb7;
+  --parchment-300:   #ddc99a;
+  --parchment-400:   #c8ad77;
+  --ink-line:        #3a3326;
+  --ink-900:         #1b1b1b;
+  --ink-700:         #3d362b;
+  --ink-500:         #6b6151;
+
+  /* ---- Map key: semantic markers (hex map legend) ---- */
+  --key-settlement: #e07a00;  /* settlement marker — burnt amber */
+  --key-site:       #8a0a08;  /* dungeon site marker */
+  --key-river:      #4f7fb5;  /* rivers and coast water */
+  --key-road:       #a2865e;  /* road dashes */
+  --key-encounter:  #dc2626;
+  --key-treasure:   #c79a16;
+
+  /* ---- Status feedback ---- */
+  --ok-400:     #4d9d6c;
+  --ok-500:     #2f9e5e;
+  --warn-500:   #d98a16;
+  --danger-500: #d3342a;
+  --info-500:   #2f86c7;
+
+  /* ============================================================
+     Semantic aliases — reference these in components, not raw scales
+     Default surface = the dark workshop chrome.
+     ============================================================ */
+
+  /* Surfaces */
+  --surface-app:      var(--stone-950);
+  --surface-sunken:   var(--stone-900);
+  --surface-panel:    var(--stone-800);
+  --surface-raised:   var(--stone-700);
+  --surface-input:    var(--stone-900);
+  --surface-overlay:  rgba(16, 15, 18, 0.86);
+
+  /* Text on dark chrome */
+  --text-strong:  var(--stone-50);
+  --text-body:    var(--stone-100);
+  --text-muted:   var(--stone-300);
+  --text-faint:   var(--stone-400);
+  --text-onbrand: #f0fbf2;
+
+  /* Borders */
+  --border-hairline: var(--stone-600);
+  --border-strong:   var(--stone-500);
+  --border-input:    var(--stone-500);
+  --border-focus:    var(--brass-300);
+
+  /* Brand actions */
+  --action-primary:        var(--canopy-500);
+  --action-primary-hover:  var(--canopy-400);
+  --action-primary-press:  var(--canopy-600);
+  --accent:                var(--brass-300);
+  --accent-ink:            var(--brass-400);
+
+  /* Parchment document surface (map views, exports, scrolls) */
+  --doc-surface: var(--parchment-100);
+  --doc-floor:   var(--parchment-floor);
+  --doc-wall:    var(--parchment-200);
+  --doc-ink:     var(--ink-900);
+  --doc-ink-muted: var(--ink-500);
+}

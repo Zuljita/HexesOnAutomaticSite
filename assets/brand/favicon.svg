@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <clipPath id="hex-clip-fav"><polygon points="45,32 38.5,43.26 25.5,43.26 19,32 25.5,20.74 38.5,20.74"/></clipPath>
+  </defs>
+  <rect width="64" height="64" rx="12" fill="#100f12"/>
+  <g stroke="#ffd800" fill="none">
+    <circle cx="32" cy="32" r="21.5" stroke-width="4.6"/>
+    <g stroke-width="6.2">
+      <line x1="32" y1="10.5" x2="32" y2="5"/>
+      <line x1="32" y1="53.5" x2="32" y2="59"/>
+      <line x1="10.5" y1="32" x2="5" y2="32"/>
+      <line x1="53.5" y1="32" x2="59" y2="32"/>
+      <line x1="16.8" y1="16.8" x2="12.9" y2="12.9"/>
+      <line x1="47.2" y1="47.2" x2="51.1" y2="51.1"/>
+      <line x1="16.8" y1="47.2" x2="12.9" y2="51.1"/>
+      <line x1="47.2" y1="16.8" x2="51.1" y2="12.9"/>
+    </g>
+  </g>
+  <polygon points="45,32 38.5,43.26 25.5,43.26 19,32 25.5,20.74 38.5,20.74" fill="#143f27"/>
+  <g clip-path="url(#hex-clip-fav)">
+    <circle cx="25" cy="25.5" r="2.8" fill="#ffd800"/>
+    <polygon points="18,44 28,28.5 32,33.5 36.5,27.5 46,44" fill="#66c08c"/>
+  </g>
+  <polygon points="45,32 38.5,43.26 25.5,43.26 19,32 25.5,20.74 38.5,20.74"
+           fill="none" stroke="#3ba669" stroke-width="3" stroke-linejoin="round"/>
+</svg>

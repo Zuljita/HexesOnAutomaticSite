@@ -1,6 +1,6 @@
 # Hexes on Automatic — public site
 
-Static site for [Hexes on Automatic](https://hexes.dungeonsonautomatic.com), the
+Static site for [Hexes on Automatic](https://hexesonautomatic.com), the
 overworld sibling of [Dungeons on Automatic](https://dungeonsonautomatic.com).
 Same design system as the DOA site (Cinzel / Spectral / IBM Plex Mono, dark
 workshop chrome, brass), with a canopy-green primary in place of DOA's ember red.
@@ -37,11 +37,13 @@ repo's mirror workflow to push here).
 - repo variable `CLOUDFLARE_ACCOUNT_ID`
 - a Pages project named `hexesonautomatic` (direct upload) in the account
 
-Canonical URLs, `robots.txt` and `sitemap.xml` assume
-`https://hexes.dungeonsonautomatic.com/` (a CNAME on the existing zone pointing
-at the Pages project). If the site ends up at a different host, swap that
-origin in the `<link rel="canonical">` / `og:` tags of the five pages plus
-`robots.txt` and `sitemap.xml`.
+The public home is `https://hexesonautomatic.com/` — the zone is already in
+the same Cloudflare account. Wire it like the DOA cutover: add apex + `www`
+as custom domains on the Pages project (proxied CNAME records to
+`hexesonautomatic.pages.dev`). Canonical URLs, `robots.txt` and `sitemap.xml`
+all assume that origin; if the host ever changes, swap it in the
+`<link rel="canonical">` / `og:` tags of the five pages plus `robots.txt`
+and `sitemap.xml`.
 
 ## Bugs
 

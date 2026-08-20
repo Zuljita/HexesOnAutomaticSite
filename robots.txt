@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://hexes.dungeonsonautomatic.com/sitemap.xml
+Sitemap: https://hexesonautomatic.com/sitemap.xml

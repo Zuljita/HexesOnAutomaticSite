@@ -199,6 +199,8 @@ body > .site-nav + header:not(.site-hero) h1 {
   align-items: center;
 }
 
+.site-hero__grid > * { min-width: 0; }
+
 .site-hero h1 {
   max-width: 670px;
   margin: 17px 0 0;
